@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <title>Latih Hobi | Pusat Bakat dan Hobi indonesia</title>
+    <link rel="icon" href="../public/img/title.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="w-full bg-white py-6 shadow-lg fixed z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center">
+          <!-- bagian kiri -->
+          <div class="flex-shrink-0">
+            <img
+              src="../public/img/logo.png"
+              alt=""
+              class="w-10 h-10 md:w-20 md:h-20"
+            />
+          </div>
+          <!-- bagian kiri end -->
+
+          <!-- bagian tengah -->
+          <div class="md:hidden font-extrabold text-blue-400 text-xl uppercase font-bubblegum">
+            Latih<span class="text-yellow-400">Hobi</span>
+          </div>
+          
+          <div class="hidden md:flex flex-grow justify-center">
+            <ul
+              class="flex space-x-6 text-lg font-medium text-slate-800 capitalize"
+            >
+              <li>
+                <a href="#" class="hover:text-blue-600">Beranda</a>
+              </li>
+              <li>
+                <a href="#about" class="hover:text-blue-600">Tentang Kami</a>
+              </li>
+              <li>
+                <a href="#profil" class="hover:text-blue-600">Profil</a>
+              </li>
+              <li>
+                <a href="#ekskul" class="hover:text-blue-600">Ekskul</a>
+              </li>
+              <li>
+                <a href="#mitra" class="hover:text-blue-600">Mitra</a>
+              </li>
+            </ul>
+          </div>
+          <!-- bagian tengah end -->
+
+          <!-- bagian kanan -->
+          <div class="hidden md:flex">
+            <a
+              href="#kontak"
+              class="bg-blue-600 py-3 px-8 rounded-full font-semibold text-white border border-blue-600 hover:bg-transparent hover:text-blue-600"
+            >
+              Contact
+            </a>
+          </div>
+          <!-- bagian kanan end -->
+
+          <!-- hamburger menu -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-button" class="focus:outline-none">
+              <svg
+                class="w-8 h-8 text-slate-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <ul
+          class="flex flex-col items-center space-y-6 mt-6 text-lg font-medium text-slate-800 capitalize"
+        >
+          <li>
+            <a href="#" class="hover:text-blue-600">Beranda</a>
+          </li>
+          <li>
+            <a href="#about" class="hover:text-blue-600">Tentang Kami</a>
+          </li>
+          <li>
+            <a href="#profil" class="hover:text-blue-600">Profil</a>
+          </li>
+          <li>
+            <a href="#ekskul" class="hover:text-blue-600">Ekskul</a>
+          </li>
+          <li>
+            <a href="#mitra" class="hover:text-blue-600">Mitra</a>
+          </li>
+          <li>
+            <a href="#kontak" class="hover:text-blue-600"> Contact </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+    <!-- navbar end -->
+
+    <!-- hero -->
+    <section>
+      <div class="w-full bg-white pt-40 pb-16">
+        <div class="container mx-auto">
+          <div class="w-[90%] flex mx-auto flex-col md:flex-row">
+            <!-- bagian kiri -->
+            <div class="md:w-1/2 mb-8 md:mb-0">
+              <div class="mb-10">
+                <h1
+                  class="font-extrabold text-4xl md:text-6xl text-slate-800 uppercase"
+                >
+                <span class="text-yellow-400">LATIH </span><span class="text-blue-400">HOBI</span> INDONESIA
+                </h1>
+              </div>
+              <div class="mb-10">
+                <p
+                  class="text-slate-500 font-medium leading-relaxed capitalize"
+                >
+                  Temukan potensi terbaik dalam dirimu bersama Latih Hobi!
+                  <br />
+                  Sebagai mitra sekolah pilihan, kami tidak hanya melatih minat
+                  dan bakat, tetapi juga menyediakan vendor ekskul terbaik
+                  dengan empat ekskul unggulan yaitu 🤖 Robotik, 🏹 Archery, 🎨
+                  Komik dan 🎥 Konten Kreator.
+                </p>
+              </div>
+              <div class="flex gap-3 items-center">
+                <p class="font-semibold text-slate-500 capitalize text-sm">
+                  We are in Socials Media :
+                </p>
+                <div class="flex space-x-3">
+                  <svg
+                    class="w-5 h-5 fill-slate-500"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>Instagram</title>
+                    <path
+                      d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5 fill-slate-500"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>TikTok</title>
+                    <path
+                      d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5 fill-slate-500"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>YouTube</title>
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- bagian kiri end -->
+            <!-- bagian kanan -->
+            <div class="md:w-1/2">
+              <div
+                class="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden items-center justify-center"
+              >
+                <div
+                  id="carousel"
+                  class="flex transition-transform duration-300 ease-in-out"
+                >
+                  <img
+                    src="../public/img/aktivitas/actrobot.jpeg"
+                    alt="Image 1"
+                    class="w-full h-full object-contain flex-shrink-0"
+                  />
+                  <img
+                    src="../public/img/aktivitas/actpanah.jpg"
+                    alt="Image 2"
+                    class="w-full h-full object-contain flex-shrink-0"
+                  />
+                  <img
+                    src="../public/img/aktivitas/actkomik.jpg"
+                    alt="Image 3"
+                    class="w-full h-full object-contain flex-shrink-0"
+                  />
+                  <img
+                    src="../public/img/aktivitas/actfutsal.jpg"
+                    alt="Image 4"
+                    class="w-full h-full object-contain flex-shrink-0"
+                  />
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button id="prev" class="bg-blue-500 text-white p-2 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                <button id="next" class="bg-blue-500 text-white p-2 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+              
+            </div>
+            <!-- bagian kanan end -->
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const carousel = document.getElementById("carousel");
+        const images = carousel.children;
+        const totalImages = images.length;
+        let index = 0;
+
+        function showNextImage() {
+          index = (index + 1) % totalImages;
+          carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function showPrevImage() {
+          index = (index - 1 + totalImages) % totalImages;
+          carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        document
+          .getElementById("next")
+          .addEventListener("click", showNextImage);
+        document
+          .getElementById("prev")
+          .addEventListener("click", showPrevImage);
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+      </script>
+    </section>
+    <!-- hero end -->
+
+    <!-- content1 -->
+    <section id="about">
+      <div class="w-full bg-white pt-40 pb-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-xl mb-16 text-center mx-auto">
+            <h1 class="font-bold text-slate-800 text-4xl capitalize mb-6 font-bubblegum">
+              Kenapa Harus <span class="text-yellow-400">Latih</span><span class="text-blue-400"> Hobi</span>?
+            </h1>
+            <p class="text-slate-500 capitalize">
+              Alasan kenapa harus memilih untuk bergabung dengan Latih Hobi.
+            </p>
+          </div>
+          <div class="w-full flex flex-wrap -mx-2">
+            <!-- card -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-4">
+              <div
+                class="bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center h-full"
+              >
+                <div class="mb-4">
+                  <img
+                    src="../public/img/lembaga.png"
+                    alt=""
+                    class="w-16 hover:scale-110 transition-all duration-500"
+                  />
+                </div>
+                <div class="space-y-3">
+                  <a
+                    href=""
+                    class="font-semibold text-xl text-slate-800 hover:text-blue-600"
+                    >Lembaga Profesional</a
+                  >
+                  <p class="text-slate-500">
+                    Kami adalah lembaga yang dikelola oleh para profesional
+                    berpengalaman, memastikan kualitas pendidikan terbaik.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-4">
+              <div
+                class="bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center h-full"
+              >
+                <div class="mb-4">
+                  <img
+                    src="../public/img/tutor.png"
+                    alt=""
+                    class="w-16 hover:scale-110 transition-all duration-500"
+                  />
+                </div>
+                <div class="space-y-3">
+                  <a
+                    href=""
+                    class="font-semibold text-xl text-slate-800 hover:text-blue-600"
+                    >Tutor Kompeten</a
+                  >
+                  <p class="text-slate-500">
+                    Tutor kami adalah ahli di bidangnya, siap membantu Anda
+                    mencapai tujuan belajar dengan metode yang efektif.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-4">
+              <div
+                class="bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center h-full"
+              >
+                <div class="mb-4">
+                  <img
+                    src="../public/img/kerjasama.png"
+                    alt=""
+                    class="w-16 hover:scale-110 transition-all duration-500"
+                  />
+                </div>
+                <div class="space-y-3">
+                  <a
+                    href=""
+                    class="font-semibold text-xl text-slate-800 hover:text-blue-600"
+                    >Kerjasama Yang Luas</a
+                  >
+                  <p class="text-slate-500">
+                    Sudah banyak sekolah yang menjalin kerjasama dengan kami
+                    untuk meningkatkan pola pikir anak dalam melakukan sebuah
+                    hal.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-2 mb-4">
+              <div
+                class="bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center h-full"
+              >
+                <div class="mb-4">
+                  <img
+                    src="../public/img/lingkungan.png"
+                    alt=""
+                    class="w-16 hover:scale-110 transition-all duration-500"
+                  />
+                </div>
+                <div class="space-y-3">
+                  <a
+                    href=""
+                    class="font-semibold text-xl text-slate-800 hover:text-blue-600"
+                    >Lingkungan Belajar Yang Nyaman</a
+                  >
+                  <p class="text-slate-500">
+                    Nikmati proses belajar di lingkungan yang nyaman dan
+                    mendukung, dirancang untuk meningkatkan fokus dan
+                    produktivitas Anda.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- content1 end -->
+
+    <!-- content2 -->
+    <section id="profil">
+      <div class="w-full bg-white pt-20 md:pt-40 pb-16">
+        <div class="container mx-auto px-4">
+          <div class="max-w-xl mb-8 md:mb-16 text-center mx-auto">
+            <h1
+              class="font-bold text-slate-800 text-2xl md:text-4xl capitalize mb-4 md:mb-6 font-bubblegum"
+            >
+              Profil <span class="text-yellow-400">Latih</span><span class="text-blue-400"> Hobi</span>
+            </h1>
+          </div>
+          <!-- more content2 -->
+          <div class="flex flex-col md:flex-row gap-6 md:gap-12">
+            <div class="w-full md:w-1/2 px-4">
+              <div class="w-full h-64 md:h-96 overflow-hidden rounded-md">
+                <img
+                  src="../public/img/test.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+              <h1 class="text-xl md:text-2xl mb-4 font-bold text-slate-800">
+                Latih Hobi
+              </h1>
+              <h3
+                class="mb-4 font-semibold italic text-lg md:text-xl text-slate-800 capitalize"
+              >
+                Pusat Bakat dan Hobi Indonesia
+              </h3>
+              <p
+                class="text-slate-600 font-normal mb-2 leading-relaxed capitalize"
+              >
+                Selamat datang di Latih Hobi, pusat terdepan untuk pengembangan
+                bakat dan hobi di Indonesia. Kami berdedikasi untuk membantu
+                anak-anak menemukan dan mengembangkan potensi terbaik mereka
+                melalui berbagai program pelatihan dan kegiatan kreatif.
+              </p>
+              <p
+                class="text-slate-600 font-normal mb-4 md:mb-10 leading-relaxed capitalize"
+              >
+                Apakah Anda ingin mengembangkan keterampilan baru, menemukan
+                hobi baru, atau mengasah bakat yang sudah ada, Latih Hobi adalah
+                tempat yang tepat untuk Anda. Bergabunglah dengan kami dan
+                jadilah bagian dari komunitas yang penuh semangat dan inovatif,
+                serta mulailah perjalanan Anda untuk mencapai potensi penuh.
+              </p>
+            </div>
+          </div>
+          <!-- more content2 end -->
+        </div>
+      </div>
+    </section>
+    <!-- content2 end -->
+
+    <!-- content3 -->
+    <section id="ekskul">
+      <div class="w-full bg-white pt-20 md:pt-40 pb-16">
+        <div class="container mx-auto px-4">
+          <!-- c3 header -->
+          <div class="mx-auto text-center mb-8 md:mb-16 space-y-4 max-w-xl">
+            <h2
+              class="font-bold text-slate-800 text-2xl md:text-4xl capitalize font-bubblegum"
+            >
+              Program ekskul di <span class="text-yellow-400">Latih</span><span class="text-blue-400"> Hobi</span>
+            </h2>
+            <p class="text-slate-500 capitalize">
+              Pilihan program ekskul di Latih Hobi
+            </p>
+          </div>
+          <!-- c3 header end -->
+          <!-- content3 more -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/robot.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL ROBOTIKA <br />
+                BERSAMA ROBONESIA
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Robonesia adalah lembaga pendidikan/sekolah robot yang bergerak
+                di bidang jasa pembelajaran khusus tentang robotika, untuk
+                memberikan ilmu sains, teknologi, dan penerapannya.
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/panah.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL PANAHAN & BERKUDA <br />
+                BERSAMA AL-FATIH STABLE
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Al Fatih Stable Salah satu tempat Stable di Bandung, proyek
+                wisata olahraga sunnah dari PT Aulia Java Land di Lembang.
+                Disini Anda bisa Berlatih & belajar berkuda, Memanah, Camping
+                Ground, Photo Session & Horseback Archery
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/komik.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL KOMIK DAN MENULIS <br />
+                BERSAMA FORUM LINGKAR PENA
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Forum Lingkar Pena adalah organisasi kepenulisan terbesar yang
+                tak henti melahirkan karya dan mencetak penulis baru dalam
+                berbagai genre kepenulisan—fiksi dan nonfiksi—selama 20 tahun
+                lebih.
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/konten.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL FILM & KONTEN KREATOR <br />
+                BERSAMA ESA PRO STUDIO
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Esa Prostudio adalah rumah produksi yang berpengalaman dari
+                tahun 2013 dan telah membuat iklan dan konten produksi lebih
+                dari 150 iklan dikerjakan oleh tenaga profesional di bidangnya
+                termasuk pengerjaan 3 film panjang dan 5 video klip
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/ngaji.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL TAHFIDZ & TAHSIN <br />
+                BERSAMA GURU NGAJI-QU
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Guru Ngaji Qu adalah tempat belajar tahfiz dan tahsin secara
+                online dan offline dengan metode AQU yang di kembangkan dan di
+                sesuaikan dengan kebutuhan anak dengan metode pembelajaran yang
+                terukur
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/futsal.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL FUTSAL <br />
+                BERSAMA FUTSAL 35
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Futsal 35 adalah salah satu lembaga pionir futsal di Bandung
+                dengan pelatih atlit yang berpengalaman di event kompetisi
+                regional dan nasional
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/karate.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL KARATE <br />
+                BERSAMA LATIH HOBI
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Karate adalah seni bela diri yang berasal dari Jepang, yang
+                menekankan teknik pukulan, tendangan, kuncian, dan blok. Dikenal
+                dengan gerakan yang kuat dan efisien, karate mengajarkan
+                disiplin diri, fokus, dan pengembangan mental. Latihan karate
+                meningkatkan kekuatan fisik, keseimbangan, dan koordinasi. Seni
+                bela diri ini juga mengandung filosofi untuk menghormati orang
+                lain, mengendalikan emosi, dan mencapai kedamaian batin. Selain
+                sebagai metode bela diri yang efektif, karate juga memberikan
+                kesempatan untuk berkompetisi di tingkat nasional dan
+                internasional, dengan sistem peringkat sabuk yang menunjukkan
+                kemajuan dan pencapaian para praktisinya.
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/taekwondo.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL TAEKWONDO <br />
+                BERSAMA LATIH HOBI
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Taekwondo adalah seni bela diri dan olahraga asal Korea yang
+                dikenal dengan teknik tendangan yang tinggi, cepat, dan
+                berputar. Selain sebagai bentuk latihan fisik yang meningkatkan
+                kekuatan, kecepatan, dan kelincahan, taekwondo juga menekankan
+                disiplin diri, pengembangan mental, dan etika. Seni bela diri
+                ini diakui secara internasional dan sering dipertandingkan di
+                berbagai kompetisi, termasuk Olimpiade. Melalui taekwondo,
+                praktisi tidak hanya belajar bela diri tetapi juga meraih
+                sertifikasi dan penghargaan yang menunjukkan tingkat
+                keterampilan dan dedikasi mereka.
+              </p>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="mb-6 rounded-md overflow-hidden shadow-xl">
+              <div class="mb-4 w-full h-48 overflow-hidden">
+                <img
+                  src="../public/img/ekskul/silat.png"
+                  alt=""
+                  class="w-full h-full object-contain hover:scale-110 transition-all duration-500"
+                />
+              </div>
+              <p
+                class="text-slate-800 font-bold text-lg md:text-xl mx-2 my-4 text-center font-bubblegum"
+              >
+                EKSKUL PENCAK SILAT <br />
+                BERSAMA LATIH HOBI
+              </p>
+              <p
+                class="text-slate-500 font-normal text-sm md:text-lg m-2 text-center"
+              >
+                Pencak Silat adalah seni bela diri tradisional yang berasal dari
+                Indonesia dan meliputi berbagai teknik pertahanan diri,
+                serangan, dan penggunaan senjata. Dikenal dengan gerakan yang
+                elegan dan dinamis, Pencak Silat tidak hanya berfungsi sebagai
+                metode bela diri yang efektif, tetapi juga sebagai bentuk
+                ekspresi seni yang indah. Seni bela diri ini mengandung
+                nilai-nilai budaya, filosofi, dan spiritual yang mendalam,
+                seperti disiplin, kehormatan, dan keselarasan dengan alam.
+                Latihan Pencak Silat meningkatkan kebugaran fisik, ketangkasan,
+                dan ketahanan mental, serta memperkuat rasa persaudaraan dan
+                komunitas melalui praktik bersama dan penghormatan terhadap
+                tradisi.
+              </p>
+            </div>
+            <!-- card end -->
+          </div>
+          <!-- content3 more end -->
+        </div>
+      </div>
+    </section>
+    <!-- content3 end -->
+
+    <!-- content4 -->
+    <section id="mitra">
+      <div class="w-full bg-white pt-40 pb-16">
+        <div class="items-center justify-center container mx-auto">
+          <!-- c4 header -->
+          <div class="mx-auto text-center mb-16 space-y-4 max-w-xl">
+            <h2 class="font-bold text-slate-800 text-4xl capitalize font-bubblegum">
+              Sekolah yang sudah Bekerjasama
+            </h2>
+            <p class="text-slate-500 capitalize">
+              Lebih dari 40 Sekolah di 8 Kabupaten / Kota telah bekerjsama.
+            </p>
+          </div>
+          <!-- c4 header end -->
+          <!-- content4 more -->
+          <div class="px-4 grid grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/1.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/2.jpeg"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/3.jpeg"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/4.jpeg"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/5.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/6.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/7.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/8.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/9.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/10.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/11.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/12.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/13.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/14.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/15.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/16.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/17.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/18.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/19.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/20.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/21.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/22.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/23.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/24.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/25.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/26.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/27.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/28.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/29.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/30.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/31.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/32.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/33.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/34.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/35.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/36.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/37.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/38.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/39.jpg"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/40.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/41.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/42.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/43.png"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/44.jpeg"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+            <!-- card -->
+            <div class="rounded-md overflow-hidden flex justify-center items-center">
+              <div class="w-28 h-28 lg:w-[180px] lg:h-[180px] overflow-hidden flex justify-center items-center"">
+                <img
+                  src="../public/img/mitra/45.jpeg"
+                  alt=""
+                  class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <!-- content4 more end -->
+        </div>
+      </div>
+    </section>
+    <!-- content4 end -->
+
+    <!-- kontak -->
+    <section id="kontak">
+      <div class="w-full bg-white pt-40 pb-16">
+        <div class="container mx-auto">
+          <div class="max-w-xl mb-16 text-center mx-auto">
+            <h1 class="font-bold text-slate-800 text-4xl capitalize mb-6 font-bubblegum">
+              Kontak <span class="text-yellow-400">Latih</span><span class="text-blue-400"> Hobi</span>
+            </h1>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-12">
+            <div class="w-full lg:w-1/2 px-1">
+              <div class="w-full h-96 rounded-md">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.1339174458017!2d107.63637399999998!3d-6.9459593999999925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e869b2c870e9%3A0x84ffa34d4b909747!2sJl.%20Idi%20Adimadja%20No.7%2C%20Gumuruh%2C%20Kec.%20Batununggal%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040275!5e0!3m2!1sid!2sid!4v1722595728645!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-1">
+              <a class="flex items-center mb-4 mx-4">
+                <svg
+                  class="w-8 h-8 flex justify-center items-center"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Google Maps</title>
+                  <path
+                    d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z"
+                  />
+                </svg>
+                <p class="ml-4">
+                  Jl. Idi Adimadja No.7, Gumuruh, <br> 
+                  Kec. Batununggal, Kota Bandung, <br> 
+                  Jawa Barat 40275
+                </p>
+              </a>
+              <a class="flex items-center m-4">
+                <svg
+                  class="w-8 h-8 flex justify-center items-center"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Gmail</title>
+                  <path
+                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                  />
+                </svg>
+                <p class="ml-4">latihhobi@gmail.com</p>
+              </a>
+              <a class="flex items-center m-4">
+                <svg
+                  class="w-8 h-8 flex justify-center items-center"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>WhatsApp</title>
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.419 0 .07 5.348.066 11.945c0 2.105.552 4.162 1.602 5.966L.057 24l6.273-1.634a11.88 11.88 0 005.698 1.452h.005c6.626 0 11.978-5.347 11.982-11.945a11.842 11.842 0 00-3.486-8.415"
+                  />
+                </svg>
+                <p class="ml-4">0819-1097-7917</p>
+              </a>
+
+              <div class="mt-12">
+                <p class="mx-4 mb-6 font-bold text-2xl">
+                  Follow Kami Di Social Media :
+                </p>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+                >
+                  <a
+                    href="https://www.instagram.com/latihhobi/"
+                    class="flex items-center m-4 hover:text-blue-600 transition-colors"
+                  >
+                    <svg
+                      class="w-8 h-8 fill-current"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Instagram</title>
+                      <path
+                        d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                      />
+                    </svg>
+                    <p class="ml-2">Instagram</p>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@latihhobi.id"
+                    class="flex items-center m-4 hover:text-blue-600 transition-colors"
+                  >
+                    <svg
+                      class="w-8 h-8 fill-current"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>TikTok</title>
+                      <path
+                        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                      />
+                    </svg>
+                    <p class="ml-2">TikTok</p>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCFOvfYCMEDCI56-n-6OQ1wQ"
+                    class="flex items-center m-4 hover:text-blue-600 transition-colors"
+                  >
+                    <svg
+                      class="w-8 h-8 fill-current"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>YouTube</title>
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.017 3.017 0 0 0 2.121 2.136c1.872.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                      />
+                    </svg>
+                    <p class="ml-2">YouTube</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- kontak end -->
+
+    <!-- footer -->
+    <footer class="w-full py-5 bg-blue-600">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap space-x-2 justify-center items-center">
+          <p class="font-bold text-white">
+            Copyright &copy 2024 latihhobi. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </body>
+</html>
